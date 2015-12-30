@@ -5,10 +5,10 @@ import android.content.IntentFilter;
 import android.net.wifi.p2p.WifiP2pDevice;
 import android.os.Handler;
 
-import com.minhld.jobshare.R;
-import com.minhld.supports.Utils;
-import com.minhld.supports.WifiBroadcaster;
-import com.minhld.supports.WifiPeerListAdapter;
+import com.minhld.job2p.R;
+import com.minhld.job2p.supports.Utils;
+import com.minhld.job2p.supports.WifiBroadcaster;
+import com.minhld.job2p.supports.WifiPeerListAdapter;
 
 import java.util.ArrayList;
 import java.util.Collection;

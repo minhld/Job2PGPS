@@ -1,6 +1,6 @@
 package com.minhld.job2p.jobs;
 
-import com.minhld.supports.Utils;
+import com.minhld.job2p.supports.Utils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

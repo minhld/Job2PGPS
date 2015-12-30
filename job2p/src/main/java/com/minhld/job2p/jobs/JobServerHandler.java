@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Handler;
 import android.os.Message;
 
-import com.minhld.supports.Utils;
+import com.minhld.job2p.supports.Utils;
 
 import java.io.ByteArrayOutputStream;
 

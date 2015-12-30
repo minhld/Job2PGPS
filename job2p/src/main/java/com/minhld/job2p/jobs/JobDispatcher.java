@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Handler;
 
-import com.minhld.supports.Utils;
-import com.minhld.supports.WifiBroadcaster;
+import com.minhld.job2p.supports.Utils;
+import com.minhld.job2p.supports.WifiBroadcaster;
 
 import java.io.File;
 

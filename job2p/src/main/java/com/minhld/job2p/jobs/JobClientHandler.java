@@ -3,8 +3,8 @@ package com.minhld.job2p.jobs;
 import android.os.Handler;
 import android.os.Message;
 
-import com.minhld.supports.Utils;
-import com.minhld.supports.WifiBroadcaster;
+import com.minhld.job2p.supports.Utils;
+import com.minhld.job2p.supports.WifiBroadcaster;
 
 /**
  * Created by minhld on 11/6/2015.

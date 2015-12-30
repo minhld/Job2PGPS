@@ -3,7 +3,7 @@ package com.minhld.job2p.jobs;
 import android.app.Activity;
 import android.os.Handler;
 
-import com.minhld.supports.Utils;
+import com.minhld.job2p.supports.Utils;
 
 import java.io.ByteArrayOutputStream;
 
