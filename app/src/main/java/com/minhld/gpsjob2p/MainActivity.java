@@ -72,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
         infoText.setMovementMethod(new ScrollingMovementMethod());
 
         // bitmap parser
-        JobDataParser dataParser = null; //new BitmapJobDataParser();
+        JobDataParser dataParser = new GPSJobDataParser();
+
         // handlers registration
         jobHandler = new JobHandler(this, mainUiHandler, dataParser);
         jobHandler.setSocketListener(new JobHandler.JobSocketListener() {
