@@ -42,12 +42,14 @@ public class GPSJobDataParser implements JobDataParser {
 
     @Override
     public Object createPlaceholder(String jsonMetadata) {
-        return "";
+        return new StringBuffer();
     }
 
     @Override
     public Object copyPartToPlaceholder(Object placeholderObj, byte[] partObj, int index) {
-        return new String(partObj);
+        StringBuffer placeholderStr = (StringBuffer) placeholderObj;
+        placeholderStr.append(new String(partObj));
+        return placeholderStr;
     }
 
     @Override

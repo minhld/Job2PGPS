@@ -120,7 +120,7 @@ public class Utils {
 //        Method m = jobClass.getMethod(JOB_EXEC_METHOD, type);
 
         // address the resource
-        return new Job().exec(srcObject);
+        return new Job().exec(c);
     }
 
     /**

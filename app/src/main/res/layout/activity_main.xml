@@ -52,8 +52,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
 
-                <ImageView
-                    android:id="@+id/previewImage"
+                <TextView
+                    android:id="@+id/previewText"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:scaleType="fitCenter"/>

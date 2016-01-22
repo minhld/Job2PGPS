@@ -49,7 +49,7 @@ public class JobDispatcher extends AsyncTask {
                 // depend on number of clients, we will split the number
                 JobData jobData;
                 Object splitObject;
-                int deviceNum = Utils.connectedDevices.size();
+                int deviceNum = Utils.connectedDevices.size() + 1;
                 // get width of each slice
                 //int pieceWidth = bmpWidth / deviceNum;
 

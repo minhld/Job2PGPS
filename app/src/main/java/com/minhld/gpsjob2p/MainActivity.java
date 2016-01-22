@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.viewFlipper)
     ViewFlipper mViewFlipper;
 
+    @Bind(R.id.previewText)
+    TextView mTextView;
+
     @Bind(R.id.closeViewBtn)
     Button closeViewBtn;
 
@@ -51,10 +55,15 @@ public class MainActivity extends AppCompatActivity {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case Utils.MAIN_JOB_DONE: {
+                    StringBuffer textRes = (StringBuffer) msg.obj;
+                    mTextView.setText("Result: " + textRes.toString());
 
                     // end of 1 thread
                     long totalTime = System.currentTimeMillis() - startTime;
                     UITools.writeLog(MainActivity.this, infoText, "end time: " + totalTime);
+
+                    mViewFlipper.setDisplayedChild(1);
+
                     break;
                 }
                 case Utils.MAIN_INFO: {

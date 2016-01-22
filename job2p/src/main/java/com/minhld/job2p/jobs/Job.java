@@ -21,8 +21,7 @@ public class Job {
 
         // if GPS is disable, suggest to open the GPS dialog to enable it
         if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
-            Toast.makeText(c, "GPS is disable on your device", Toast.LENGTH_SHORT).show();
-            c.startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+            return "GPS disabled";
         }
 
         LocationListener locationListener = new LocationListener() {
