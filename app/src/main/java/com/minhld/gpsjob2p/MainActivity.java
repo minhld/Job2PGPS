@@ -52,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
             switch (msg.what) {
                 case Utils.MAIN_JOB_DONE: {
 
+                    // end of 1 thread
+                    long totalTime = System.currentTimeMillis() - startTime;
+                    UITools.writeLog(MainActivity.this, infoText, "end time: " + totalTime);
                     break;
                 }
                 case Utils.MAIN_INFO: {

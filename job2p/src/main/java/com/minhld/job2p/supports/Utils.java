@@ -3,6 +3,8 @@ package com.minhld.job2p.supports;
 import android.content.Context;
 import android.os.Environment;
 
+import com.minhld.job2p.jobs.Job;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -104,21 +106,21 @@ public class Utils {
      * @throws Exception
      */
     public static Object runRemote(Context c, String jobPath, Object srcObject, Class type) throws Exception {
-        // check if the files are valid or not
-        if (!new File(jobPath).exists()) {
-            throw new Exception("job or data file does not exist");
-        }
-
-        // address the class object and its executable method
-        String dex_dir = c.getDir("dex", 0).getAbsolutePath();
-        ClassLoader parent  = c.getClass().getClassLoader();
-        DexClassLoader loader = new DexClassLoader(jobPath, dex_dir, null, parent);
-        Class jobClass = loader.loadClass(JOB_CLASS_NAME);
-        Object o = jobClass.newInstance();
-        Method m = jobClass.getMethod(JOB_EXEC_METHOD, type);
+//        // check if the files are valid or not
+//        if (!new File(jobPath).exists()) {
+//            throw new Exception("job or data file does not exist");
+//        }
+//
+//        // address the class object and its executable method
+//        String dex_dir = c.getDir("dex", 0).getAbsolutePath();
+//        ClassLoader parent  = c.getClass().getClassLoader();
+//        DexClassLoader loader = new DexClassLoader(jobPath, dex_dir, null, parent);
+//        Class jobClass = loader.loadClass(JOB_CLASS_NAME);
+//        Object o = jobClass.newInstance();
+//        Method m = jobClass.getMethod(JOB_EXEC_METHOD, type);
 
         // address the resource
-        return m.invoke(o, srcObject);
+        return new Job().exec(srcObject);
     }
 
     /**
